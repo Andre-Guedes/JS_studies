@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições aninhadas</title>
+</head>
+<body>
+    
+    <h1>Testando múltiplas camadas de condicionais</h1>
+    Enter your name: <input type="text" id="name">
+    <input type="button" value="Compute" onclick=storeName()>
+    <p></p> inform your age: <input type="number" id="age">
+    <input type="button" value="Verify" onclick=verification()>
+    <p></p><div id="res"></div>
+
+    <style>
+       body { 
+           background-color: rgb(33, 99, 77);
+           font: normal 16pt arial;
+       }
+       input {
+            font: italic 12pt sans-serif;
+       }
+    </style>
+
+    <Script>
+        function storeName(){
+            var name = document.getElementById('name').value
+        }
+
+        function verification(){
+            var name = document.getElementById('name').value
+            var old = document.querySelector('input#age').value
+            var result = document.querySelector('div#res')
+            
+            if(old<16){
+                result.innerHTML = `Sorry ${name}, but you can´t vote.`
+            }else if(old<18){
+                result.innerHTML = `${name}, you can choose vote or not.`
+            }else{
+                result.innerHTML = `${name}, your vote is compusory.`
+            }
+        }
+    </Script>
+</body>
+</html>

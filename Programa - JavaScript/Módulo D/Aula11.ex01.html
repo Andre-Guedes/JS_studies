@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificando Nacionalidade</title>
+</head>
+<body>
+    <h1>Testing your nacionality</h1>
+    Please, write what country you live right now: <input id="live" type="text">
+    <input id="ver" type="button" value="Verify" onclick="autentication()">
+    <p></p><div id="conf"></div>
+
+    <script>
+        function autentication() {
+            var nat = document.querySelector('input#live')
+            var res = document.querySelector('div#conf')
+
+            if (nat.innerHTML === "Brasil"){
+                res.innerHTML = "Congrats! You´re a Brazilian guy."
+            }else res.innerHTML = "Sorry, you´re a foreigner guy."
+        }
+    </script>
+</body>
+</html>

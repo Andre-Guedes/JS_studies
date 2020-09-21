@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing multilayer conditions</title>
+</head>
+<body>
+    <h1>System of payment Park</h1>
+    Inform your name: <input type="text" id="name">
+    <p></p> Please, inform when you park your vehicle: 
+    <input type="date" placeholder="Inform the date" id="dateTime">
+    <input type="time" id="hourTime">
+    <input type="button" value="Confirm" onclick=calculing()>
+    <div id="msg"></div>
+
+    <style>
+        body { 
+            background: black;
+            color: rgb(24, 184, 224);
+        }
+    </style>
+
+    <script>
+        var inDate = document.querySelector('#dateTime')
+        var inHour = document.querySelector('#hourTime')
+        var inTime = inDate.value + inHour.value
+        var now = new Time()
+
+     
+        
+        
+        function calculing(){
+           console.log(now);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Velocity detector</h1>
+    Please, write what velocity you drive your vehicle right now: 
+    <p></p><input id="vel" type="number"> Km/h
+    <input id="ver" type="button" value="Verify" onclick="autentication()">
+    <p></p><div id="conf"></div>
+
+    <script>
+        var VelLimit = 60
+
+        function autentication() {
+            var vel = document.querySelector('input#vel');
+            //var NumVel = Number(vel.value);      É possível extrair diretamente nos parâmetros da função
+            //                                     o valor do elemento, usando a 'variavel.VALUE'.
+            var verification = document.querySelector('div#conf');
+
+            if (vel.value > VelLimit){
+                verification.innerHTML = "<strong>You´re under arrest for exceeding the speed limit!</strong>"
+            }else{verification.innerHTML = "Have a nice day and take care on road."}
+        }
+    </script>
+</body>
+</html>

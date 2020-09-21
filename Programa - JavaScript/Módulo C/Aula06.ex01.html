@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Somatory Page</title>
+    <Style>
+        body {
+            background-color: rgb(68, 117, 39);
+            color: white;
+        }
+        input{
+            width: 80px;
+        }
+        input#add{
+            width: 50px;
+            background-color: rgb(209, 8, 8);
+        }
+    </Style>
+</head>
+<body>
+    <h1>Testing adding tools</h1>
+    <input id="1st" type="number" placeholder="1st value">
+    <input id="2nd" type="number" placeholder="2nd value">
+    <input id="add" type="button" value="Add" onclick=add()>
+    <p>The solve of your add is: </p>
+    <div id="res">Loading...</div>
+
+    <Script>
+        function add() {
+        var n1 = document.getElementById("1st");
+        var n2 = document.getElementById("2nd");
+        var n1Number = Number(n1.value);
+        var n2Number = Number(n2.value);
+        var add = n1Number + n2Number;
+        
+        var s = document.getElementById("res")
+        s.innerHTML = `The adding result of ${n1Number} and 
+                        ${n2Number} is <strong>${add}</strong>`
+        }
+        
+    </Script>
+</body>
+</html>
