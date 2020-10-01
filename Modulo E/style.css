@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+body{
+    background-image: url(back.jpg);
+
+ }
+
+header{
+    font-size: normal 20pt Arial;
+    font-style: normal bold;
+    color: cornsilk;
+    justify-content: space-around;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+section{
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.432);
+    text-align: center;
+    width: 50vh;
+    height: 60vh;
+    margin: auto;
+    border-radius: 10px;
+}
+
+footer{
+    text-align: center;
+}
