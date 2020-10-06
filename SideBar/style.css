@@ -1,0 +1,172 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color: black;
+}
+
+header{
+    position: absolute;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    background: #22242A;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+}
+
+.left_area{
+    display: block;
+    height: 30px;
+    width: 220vh;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+}
+
+.left_area h3{
+    color: rgb(177, 177, 177);
+    margin: 5px 10px 5px;
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+.left_area span{
+    color: #1DC4E7;
+    text-transform: uppercase;
+    font-weight: 1000;
+    text-shadow: 3px 3px 8px rgb(0,0,0,0.5);
+}
+
+.right_area{
+    float: right;
+    margin-top: -30px;
+    position: relative;
+    display: block;
+    text-align: right;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.check{
+    display: none;
+}
+
+.right_area label{
+    z-index: 1;
+    margin-right: 20px;
+    color: rgb(177, 177, 177);
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.5s ease;
+    transition-property: color;
+}
+
+.right_area label:hover{
+    color: #117185;
+}
+
+.logout_btn{
+    text-decoration: none;
+    background: #1DC4E7;
+    padding: 5px;
+    margin-top: -20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.5s ease;
+    transition-property: background;
+}
+
+.logout_btn:hover{
+    background: #117185;
+}
+
+.sidebar{
+    background: #2F323A;
+    position: fixed;
+    margin-top: 70px;
+    padding-top: 30px;
+    right: 0;
+    width: 240px;
+    height: 100%;
+    transition: 0.5s ease;
+    transition-property: right;
+}
+
+.sidebar .stand_img{
+    margin-left: 35px;
+    margin-bottom: 5px;
+    width: 180px;
+    height: 180px;
+    transition: 0.5s ease;
+    transition-property: width, height, margin-left;
+}
+
+.sidebar h4{
+    margin-left: 50px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.sidebar a{
+    color: #fff;
+    display: block;
+    align-items: column;
+    line-height: 60px;
+    width: 100%;
+    text-decoration: none;
+    padding-left: 30px;
+    box-sizing: border-box;
+    transition: 0.5s ease;
+    transition-property: background, font-size, margin-top;
+}
+
+.sidebar a:hover{
+    background: #117185;
+}
+
+.sidebar span{
+    padding-left: 8px;
+}
+
+.back_img{
+    margin-right: 240px;
+    background: url(back.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: 0.5s ease;
+    transition-property: margin-right;
+}
+
+#check:checked ~ .sidebar{
+    right: -180px;
+}
+#check:checked ~ .sidebar a span{
+    display: none;
+}
+#check:checked ~ .sidebar a{
+    margin-top: 20px;
+    font-size: 15px;
+    width: 60px;
+}
+#check:checked ~ .sidebar i{
+    margin-left: -8px;
+}
+#check:checked ~ .sidebar h4{
+    display: none;
+}
+#check:checked ~ .sidebar img{
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+}
+#check:checked ~ .back_img{
+    margin-right: 60px;
+}
