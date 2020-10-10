@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Parking Reserver System</title>
+</head>
+<body>
+    
+    <input type="checkbox" class="check" id="check">
+
+    <header>
+        
+        <div class="left_area">
+            <h3>Parking <span>Reserver</span> System</h3>
+
+            <div class="right_area">
+            <a href="#" class="logout_btn">Login</a>
+           
+            <label for="check" class="check_btn">
+                <i class="fas fa-bars" id="sidebar_btn"></i>
+            </label>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        
+        <img src="stand_img.png" class="stand_img" alt="profile_photo">
+        <h4 id="photo_tag">Gorgeous Friends</h4>
+    
+        <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+        <a href="#"><i class="fas fa-parking"></i><span>Parking</span></a>
+        <a href="#"><i class="fas fa-table"></i><span>Payment</span></a>
+        <a href="#"><i class="fas fa-info-circle"></i><span>Tracking</span></a>
+        <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+
+    </div>
+
+    <div class="back_img"></div>
+
+    <section class="report">
+        <center class="center">
+            <div class="name">
+                <div class="name_mask">Name 
+                    <input type="text" class="name_txt" id="name_txt">
+                    <label for="check_name" id="name_label">
+                        <i class="fas fa-check-circle" id="check_name_btn"></i>
+                    </label>
+                </div>
+            </div>
+
+            <div class="vehicle">
+                <div class="kind_Veh">How kind of vehicle 
+                    <select name="kind_vehicle" class="kind_vehicle" id="kind">
+                        <option value="bike">Bike</option>
+                        <option value="moto">Motocicle</option>
+                        <option value="suv">SUV</option>
+                        <option value="sport">sport</option>
+                        <option value="pickup">Pick-up</option>
+                    </select>
+                    <label for="check_kind" id="veh_txt">
+                        <i class="fas fa-check-circle" id="check_kind_btn"></i>
+                    </label>
+                </div>
+            </div>
+
+            <div class="date">
+                <div class="date_mask">Choose your dates
+                    <input type="datetime-local" class="dt_in" id="dt_in">
+                    <input type="datetime-local" class="dt_out" id="dt_out">
+                    <label for="check_date" id="reserver_date">
+                        <i class="fas fa-angle-double-right" id="check_date_btn"></i>
+                    </label>
+                </div>
+            </div>
+        </center>
+
+        <div class="res" style="display: none"><p class="res_txt"></p></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
